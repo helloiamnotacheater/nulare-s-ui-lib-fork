@@ -637,13 +637,6 @@ do
         menuSection:Toggle('Watermark', true, function(newValue)
             self:SetWatermarkEnabled(newValue)
         end)
-        menuSection:Toggle('Custom menu title', self._custom_title_enabled, function(newValue)
-            self._custom_title_enabled = newValue
-        end)
-        self._custom_title = self.title
-        menuSection:Textbox('Menu title', self.title, function(newValue)
-            self._custom_title = newValue
-        end)
 
         local themingSection = settingsTab:Section('Theming')
         local themes = {'Default', 'Gamesense', 'Bitchbot'}
